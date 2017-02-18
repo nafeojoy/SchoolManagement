@@ -1,0 +1,17 @@
+F:\Default Project Directory\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.dll.config
+F:\Default Project Directory\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.dll
+F:\Default Project Directory\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.pdb
+F:\Default Project Directory\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.dll
+F:\Default Project Directory\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.pdb
+F:\Default Project Directory\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.csprojResolveAssemblyReference.cache
+F:\Projects\BackUp\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.dll.config
+F:\Projects\BackUp\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.dll
+F:\Projects\BackUp\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.pdb
+F:\Projects\BackUp\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.dll
+F:\Projects\BackUp\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.pdb
+F:\Projects\BackUp\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.csprojResolveAssemblyReference.cache
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.dll.config
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.dll
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementLibrary\bin\Debug\SchoolManagementLibrary.pdb
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.dll
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementLibrary\obj\Debug\SchoolManagementLibrary.pdb

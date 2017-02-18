@@ -1,0 +1,52 @@
+<div>
+	<table cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_GridView1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Name</th><th scope="col">City</th>
+		</tr><tr>
+			<td>John Smith</td><td>California</td>
+		</tr><tr>
+			<td>Andrew Clark</td><td>Tokio</td>
+		</tr><tr>
+			<td>Mitchell Doe</td><td>Dubai</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_GridView1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Name</th><th scope="col">City</th>
+		</tr><tr>
+			<td>John Smith</td><td>California</td>
+		</tr><tr>
+			<td>Andrew Clark</td><td>Tokio</td>
+		</tr><tr>
+			<td>Mitchell Doe</td><td>Dubai</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table cellspacing="0" rules="all" border="1" id="GridView1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Name</th><th scope="col">City</th>
+		</tr><tr>
+			<td>John Smith</td><td>California</td>
+		</tr><tr>
+			<td>Andrew Clark</td><td>Tokio</td>
+		</tr><tr>
+			<td>Mitchell Doe</td><td>Dubai</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table cellspacing="0" rules="all" border="1" id="GridView1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Name</th><th scope="col">City</th>
+		</tr><tr>
+			<td>John Smith</td><td>California</td>
+		</tr><tr>
+			<td>Andrew Clark</td><td>Tokio</td>
+		</tr><tr>
+			<td>Mitchell Doe</td><td>Dubai</td>
+		</tr>
+	</table>
+</div>

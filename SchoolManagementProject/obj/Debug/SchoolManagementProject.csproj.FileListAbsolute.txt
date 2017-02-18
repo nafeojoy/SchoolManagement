@@ -1,0 +1,26 @@
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.csprojResolveAssemblyReference.cache
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\bin\SchoolManagementProject.dll
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\bin\SchoolManagementProject.pdb
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\bin\AjaxControlToolkit.dll
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\bin\SchoolManagementLibrary.dll
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\bin\SchoolManagementLibrary.pdb
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.dll
+F:\Default Project Directory\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.pdb
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementProject.dll
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementProject.pdb
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\bin\AjaxControlToolkit.dll
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementLibrary.dll
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementLibrary.pdb
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.csprojResolveAssemblyReference.cache
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.dll
+F:\Projects\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.pdb
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementProject.dll
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementProject.pdb
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\bin\AjaxControlToolkit.dll
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementLibrary.dll
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\bin\SchoolManagementLibrary.pdb
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.csprojResolveAssemblyReference.cache
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.dll
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\SchoolManagementProject.pdb
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\RdlCompile.cache
+F:\Projects\New folder\BackUp\SchoolManagement\SchoolManagementProject\obj\Debug\RdlCompile.compiled

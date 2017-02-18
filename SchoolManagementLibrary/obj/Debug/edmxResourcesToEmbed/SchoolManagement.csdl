@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolManagementDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SchoolManagementDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAdmins" EntityType="SchoolManagementDBModel.tblAdmin" />
+    <EntitySet Name="tblAssigns" EntityType="SchoolManagementDBModel.tblAssign" />
+    <EntitySet Name="tblAttendanceCounts" EntityType="SchoolManagementDBModel.tblAttendanceCount" />
+    <EntitySet Name="tblAttendanceTotals" EntityType="SchoolManagementDBModel.tblAttendanceTotal" />
+    <EntitySet Name="tblClasses" EntityType="SchoolManagementDBModel.tblClass" />
+    <EntitySet Name="tblGuardians" EntityType="SchoolManagementDBModel.tblGuardian" />
+    <EntitySet Name="tblResults" EntityType="SchoolManagementDBModel.tblResult" />
+    <EntitySet Name="tblStudents" EntityType="SchoolManagementDBModel.tblStudent" />
+    <EntitySet Name="tblSubjects" EntityType="SchoolManagementDBModel.tblSubject" />
+    <EntitySet Name="tblTeachers" EntityType="SchoolManagementDBModel.tblTeacher" />
+    <EntitySet Name="tblUploads" EntityType="SchoolManagementDBModel.tblUpload" />
+    <EntitySet Name="tblUserLoginInfoes" EntityType="SchoolManagementDBModel.tblUserLoginInfo" />
+    <EntitySet Name="View_1" EntityType="SchoolManagementDBModel.View_1" />
+    <EntitySet Name="View_AllResult" EntityType="SchoolManagementDBModel.View_AllResult" />
+    <EntitySet Name="View_Assign" EntityType="SchoolManagementDBModel.View_Assign" />
+    <EntitySet Name="View_Attendance" EntityType="SchoolManagementDBModel.View_Attendance" />
+    <EntitySet Name="view_Attendance_Count" EntityType="SchoolManagementDBModel.view_Attendance_Count" />
+    <EntitySet Name="View_ClassLoad" EntityType="SchoolManagementDBModel.View_ClassLoad" />
+    <EntitySet Name="view_GuardianIsChecked" EntityType="SchoolManagementDBModel.view_GuardianIsChecked" />
+    <EntitySet Name="View_ResultInfo" EntityType="SchoolManagementDBModel.View_ResultInfo" />
+    <EntitySet Name="View_ResultView" EntityType="SchoolManagementDBModel.View_ResultView" />
+    <EntitySet Name="View_ResultViewUpdate" EntityType="SchoolManagementDBModel.View_ResultViewUpdate" />
+    <EntitySet Name="View_SubjectLoad" EntityType="SchoolManagementDBModel.View_SubjectLoad" />
+  </EntityContainer>
+  <EntityType Name="tblAdmin">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Type="Int32" Name="AdminId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AdminName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblAssign">
+    <Key>
+      <PropertyRef Name="AssignId" />
+    </Key>
+    <Property Type="Int32" Name="AssignId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ClassId" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Int32" Name="Teacherid" />
+  </EntityType>
+  <EntityType Name="tblAttendanceCount">
+    <Key>
+      <PropertyRef Name="ACId" />
+    </Key>
+    <Property Type="Int32" Name="ACId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StudentId" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="String" Name="DateString" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblAttendanceTotal">
+    <Key>
+      <PropertyRef Name="ATId" />
+    </Key>
+    <Property Type="Int32" Name="ATId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StudentId" Nullable="false" />
+    <Property Type="Int32" Name="total" />
+    <Property Type="Int32" Name="present" />
+    <Property Type="Int32" Name="absent" />
+  </EntityType>
+  <EntityType Name="tblClass">
+    <Key>
+      <PropertyRef Name="ClassId" />
+    </Key>
+    <Property Type="Int32" Name="ClassId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblGuardian">
+    <Key>
+      <PropertyRef Name="GuardianId" />
+    </Key>
+    <Property Type="Int32" Name="GuardianId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StudentId" Nullable="false" />
+    <Property Type="String" Name="guardName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="guardPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="guardEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StudentId2" />
+    <Property Type="Int32" Name="StudentId3" />
+    <Property Type="Int32" Name="StudentId4" />
+    <Property Type="Int32" Name="StudentId5" />
+  </EntityType>
+  <EntityType Name="tblResult">
+    <Key>
+      <PropertyRef Name="ResultId" />
+    </Key>
+    <Property Type="Int32" Name="ResultId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ClassId" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="StudentId" />
+  </EntityType>
+  <EntityType Name="tblStudent">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Type="Int32" Name="StudentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="stdBirthDate" />
+    <Property Type="String" Name="stdAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdFatherName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdMotherName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClassId" />
+  </EntityType>
+  <EntityType Name="tblSubject">
+    <Key>
+      <PropertyRef Name="SubjectId" />
+    </Key>
+    <Property Type="Int32" Name="SubjectId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblTeacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Type="Int32" Name="TeacherId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="tchProfileId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tchName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tchDesignation" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tchEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tchPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SSC" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="HSC" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Honors" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Masters" Precision="18" Scale="2" />
+    <Property Type="String" Name="Others" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClassTeacherId" />
+  </EntityType>
+  <EntityType Name="tblUpload">
+    <Key>
+      <PropertyRef Name="UploadId" />
+    </Key>
+    <Property Type="Int32" Name="UploadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="upFile" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="upName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date" />
+  </EntityType>
+  <EntityType Name="tblUserLoginInfo">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Type="Int32" Name="LoginId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="userName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userPassword" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userRole" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TeacherId" />
+    <Property Type="Int32" Name="StudentId" />
+    <Property Type="Int32" Name="GuardianId" />
+    <Property Type="Int32" Name="AdminId" />
+    <Property Type="Int32" Name="IsApproved" />
+  </EntityType>
+  <EntityType Name="View_1">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Type="Int32" Name="StudentId" Nullable="false" />
+    <Property Type="String" Name="guardName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="stdBirthDate" />
+    <Property Type="Int32" Name="StudentId2" />
+    <Property Type="String" Name="std2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StudentId3" />
+    <Property Type="String" Name="std3" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_AllResult">
+    <Key>
+      <PropertyRef Name="ResultId" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="stdId" />
+      <PropertyRef Name="subjectCode" />
+    </Key>
+    <Property Type="Int32" Name="ResultId" Nullable="false" />
+    <Property Type="Int32" Name="ClassId" Nullable="false" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Int32" Name="StudentId" />
+  </EntityType>
+  <EntityType Name="View_Assign">
+    <Key>
+      <PropertyRef Name="subjectCode" />
+      <PropertyRef Name="tchProfileId" />
+      <PropertyRef Name="AssignId" />
+    </Key>
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tchProfileId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tchName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AssignId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_Attendance">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="stdId" />
+    </Key>
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TotalPresent" />
+    <Property Type="Int32" Name="TotalAbsent" />
+    <Property Type="Int32" Name="StudentId" Nullable="false" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClassId" />
+  </EntityType>
+  <EntityType Name="view_Attendance_Count">
+    <Key>
+      <PropertyRef Name="ACId" />
+      <PropertyRef Name="stdId" />
+      <PropertyRef Name="Stat" />
+    </Key>
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Date2" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Int32" Name="ACId" Nullable="false" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StudentId" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="Int32" Name="ClassId" />
+    <Property Type="String" Name="Stat" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_ClassLoad">
+    <Key>
+      <PropertyRef Name="ClassId" />
+    </Key>
+    <Property Type="Int32" Name="Teacherid" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClassId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="view_GuardianIsChecked">
+    <Key>
+      <PropertyRef Name="GuardianId" />
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Type="Int32" Name="GuardianId" Nullable="false" />
+    <Property Type="String" Name="guardName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="guardPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IsApproved" />
+    <Property Type="String" Name="guardEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="LoginId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_ResultInfo">
+    <Key>
+      <PropertyRef Name="ResultId" />
+      <PropertyRef Name="stdId" />
+      <PropertyRef Name="subjectCode" />
+    </Key>
+    <Property Type="Int32" Name="ResultId" Nullable="false" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Int32" Name="ClassId" />
+  </EntityType>
+  <EntityType Name="View_ResultView">
+    <Key>
+      <PropertyRef Name="stdId" />
+      <PropertyRef Name="ResultId" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="Expr2" />
+      <PropertyRef Name="subjectCode" />
+    </Key>
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ResultId" Nullable="false" />
+    <Property Type="Int32" Name="ClassId" />
+    <Property Type="Int32" Name="Expr1" Nullable="false" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Int32" Name="StudentId" Nullable="false" />
+    <Property Type="Int32" Name="Expr2" Nullable="false" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_ResultViewUpdate">
+    <Key>
+      <PropertyRef Name="subjectCode" />
+      <PropertyRef Name="stdId" />
+      <PropertyRef Name="AssignId" />
+      <PropertyRef Name="ResultId" />
+    </Key>
+    <Property Type="Int32" Name="Teacherid" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Int32" Name="ClassId" />
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+    <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AssignId" Nullable="false" />
+    <Property Type="Int32" Name="ResultId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_SubjectLoad">
+    <Key>
+      <PropertyRef Name="AssignId" />
+      <PropertyRef Name="subjectCode" />
+    </Key>
+    <Property Type="Int32" Name="AssignId" Nullable="false" />
+    <Property Type="Int32" Name="ClassId" />
+    <Property Type="Int32" Name="SubjectId" />
+    <Property Type="Int32" Name="Teacherid" />
+    <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

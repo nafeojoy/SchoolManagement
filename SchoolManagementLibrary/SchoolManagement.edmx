@@ -1,0 +1,1191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SchoolManagementDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SchoolManagementDBModelStoreContainer">
+          <EntitySet Name="tblAdmin" EntityType="SchoolManagementDBModel.Store.tblAdmin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblAssign" EntityType="SchoolManagementDBModel.Store.tblAssign" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblAttendanceCount" EntityType="SchoolManagementDBModel.Store.tblAttendanceCount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblAttendanceTotal" EntityType="SchoolManagementDBModel.Store.tblAttendanceTotal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblClass" EntityType="SchoolManagementDBModel.Store.tblClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblGuardian" EntityType="SchoolManagementDBModel.Store.tblGuardian" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblResult" EntityType="SchoolManagementDBModel.Store.tblResult" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblStudent" EntityType="SchoolManagementDBModel.Store.tblStudent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblSubject" EntityType="SchoolManagementDBModel.Store.tblSubject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblTeacher" EntityType="SchoolManagementDBModel.Store.tblTeacher" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblUploads" EntityType="SchoolManagementDBModel.Store.tblUploads" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblUserLoginInfo" EntityType="SchoolManagementDBModel.Store.tblUserLoginInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="View_1" EntityType="SchoolManagementDBModel.Store.View_1" store:Type="Views" store:Schema="dbo" store:Name="View_1">
+            <DefiningQuery>SELECT 
+      [View_1].[StudentId] AS [StudentId], 
+      [View_1].[guardName] AS [guardName], 
+      [View_1].[stdName] AS [stdName], 
+      [View_1].[stdBirthDate] AS [stdBirthDate], 
+      [View_1].[StudentId2] AS [StudentId2], 
+      [View_1].[std2] AS [std2], 
+      [View_1].[StudentId3] AS [StudentId3], 
+      [View_1].[std3] AS [std3]
+      FROM [dbo].[View_1] AS [View_1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_AllResult" EntityType="SchoolManagementDBModel.Store.View_AllResult" store:Type="Views" store:Schema="dbo" store:Name="View_AllResult">
+            <DefiningQuery>SELECT 
+      [View_AllResult].[ResultId] AS [ResultId], 
+      [View_AllResult].[ClassId] AS [ClassId], 
+      [View_AllResult].[className] AS [className], 
+      [View_AllResult].[Quiz] AS [Quiz], 
+      [View_AllResult].[Final] AS [Final], 
+      [View_AllResult].[Total] AS [Total], 
+      [View_AllResult].[stdId] AS [stdId], 
+      [View_AllResult].[subjectCode] AS [subjectCode], 
+      [View_AllResult].[subjectName] AS [subjectName], 
+      [View_AllResult].[stdName] AS [stdName], 
+      [View_AllResult].[SubjectId] AS [SubjectId], 
+      [View_AllResult].[StudentId] AS [StudentId]
+      FROM [dbo].[View_AllResult] AS [View_AllResult]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_Assign" EntityType="SchoolManagementDBModel.Store.View_Assign" store:Type="Views" store:Schema="dbo" store:Name="View_Assign">
+            <DefiningQuery>SELECT 
+      [View_Assign].[subjectName] AS [subjectName], 
+      [View_Assign].[subjectCode] AS [subjectCode], 
+      [View_Assign].[className] AS [className], 
+      [View_Assign].[tchProfileId] AS [tchProfileId], 
+      [View_Assign].[tchName] AS [tchName], 
+      [View_Assign].[AssignId] AS [AssignId]
+      FROM [dbo].[View_Assign] AS [View_Assign]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_Attendance" EntityType="SchoolManagementDBModel.Store.View_Attendance" store:Type="Views" store:Schema="dbo" store:Name="View_Attendance">
+            <DefiningQuery>SELECT 
+      [View_Attendance].[stdName] AS [stdName], 
+      [View_Attendance].[TotalPresent] AS [TotalPresent], 
+      [View_Attendance].[TotalAbsent] AS [TotalAbsent], 
+      [View_Attendance].[StudentId] AS [StudentId], 
+      [View_Attendance].[stdId] AS [stdId], 
+      [View_Attendance].[ClassId] AS [ClassId]
+      FROM [dbo].[View_Attendance] AS [View_Attendance]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="view_Attendance_Count" EntityType="SchoolManagementDBModel.Store.view_Attendance_Count" store:Type="Views" store:Schema="dbo" store:Name="view_Attendance_Count">
+            <DefiningQuery>SELECT 
+      [view_Attendance_Count].[className] AS [className], 
+      [view_Attendance_Count].[Date2] AS [Date2], 
+      [view_Attendance_Count].[Status] AS [Status], 
+      [view_Attendance_Count].[ACId] AS [ACId], 
+      [view_Attendance_Count].[stdId] AS [stdId], 
+      [view_Attendance_Count].[stdName] AS [stdName], 
+      [view_Attendance_Count].[StudentId] AS [StudentId], 
+      [view_Attendance_Count].[Date] AS [Date], 
+      [view_Attendance_Count].[ClassId] AS [ClassId], 
+      [view_Attendance_Count].[Stat] AS [Stat]
+      FROM [dbo].[view_Attendance_Count] AS [view_Attendance_Count]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ClassLoad" EntityType="SchoolManagementDBModel.Store.View_ClassLoad" store:Type="Views" store:Schema="dbo" store:Name="View_ClassLoad">
+            <DefiningQuery>SELECT 
+      [View_ClassLoad].[Teacherid] AS [Teacherid], 
+      [View_ClassLoad].[className] AS [className], 
+      [View_ClassLoad].[ClassId] AS [ClassId]
+      FROM [dbo].[View_ClassLoad] AS [View_ClassLoad]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="view_GuardianIsChecked" EntityType="SchoolManagementDBModel.Store.view_GuardianIsChecked" store:Type="Views" store:Schema="dbo" store:Name="view_GuardianIsChecked">
+            <DefiningQuery>SELECT 
+      [view_GuardianIsChecked].[GuardianId] AS [GuardianId], 
+      [view_GuardianIsChecked].[guardName] AS [guardName], 
+      [view_GuardianIsChecked].[guardPhone] AS [guardPhone], 
+      [view_GuardianIsChecked].[IsApproved] AS [IsApproved], 
+      [view_GuardianIsChecked].[guardEmail] AS [guardEmail], 
+      [view_GuardianIsChecked].[LoginId] AS [LoginId]
+      FROM [dbo].[view_GuardianIsChecked] AS [view_GuardianIsChecked]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ResultInfo" EntityType="SchoolManagementDBModel.Store.View_ResultInfo" store:Type="Views" store:Schema="dbo" store:Name="View_ResultInfo">
+            <DefiningQuery>SELECT 
+      [View_ResultInfo].[ResultId] AS [ResultId], 
+      [View_ResultInfo].[className] AS [className], 
+      [View_ResultInfo].[Quiz] AS [Quiz], 
+      [View_ResultInfo].[Final] AS [Final], 
+      [View_ResultInfo].[Total] AS [Total], 
+      [View_ResultInfo].[stdId] AS [stdId], 
+      [View_ResultInfo].[stdName] AS [stdName], 
+      [View_ResultInfo].[subjectCode] AS [subjectCode], 
+      [View_ResultInfo].[subjectName] AS [subjectName], 
+      [View_ResultInfo].[SubjectId] AS [SubjectId], 
+      [View_ResultInfo].[ClassId] AS [ClassId]
+      FROM [dbo].[View_ResultInfo] AS [View_ResultInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ResultView" EntityType="SchoolManagementDBModel.Store.View_ResultView" store:Type="Views" store:Schema="dbo" store:Name="View_ResultView">
+            <DefiningQuery>SELECT 
+      [View_ResultView].[stdName] AS [stdName], 
+      [View_ResultView].[stdId] AS [stdId], 
+      [View_ResultView].[Quiz] AS [Quiz], 
+      [View_ResultView].[Final] AS [Final], 
+      [View_ResultView].[Total] AS [Total], 
+      [View_ResultView].[ResultId] AS [ResultId], 
+      [View_ResultView].[ClassId] AS [ClassId], 
+      [View_ResultView].[Expr1] AS [Expr1], 
+      [View_ResultView].[className] AS [className], 
+      [View_ResultView].[SubjectId] AS [SubjectId], 
+      [View_ResultView].[StudentId] AS [StudentId], 
+      [View_ResultView].[Expr2] AS [Expr2], 
+      [View_ResultView].[subjectCode] AS [subjectCode], 
+      [View_ResultView].[subjectName] AS [subjectName]
+      FROM [dbo].[View_ResultView] AS [View_ResultView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ResultViewUpdate" EntityType="SchoolManagementDBModel.Store.View_ResultViewUpdate" store:Type="Views" store:Schema="dbo" store:Name="View_ResultViewUpdate">
+            <DefiningQuery>SELECT 
+      [View_ResultViewUpdate].[Teacherid] AS [Teacherid], 
+      [View_ResultViewUpdate].[SubjectId] AS [SubjectId], 
+      [View_ResultViewUpdate].[ClassId] AS [ClassId], 
+      [View_ResultViewUpdate].[subjectName] AS [subjectName], 
+      [View_ResultViewUpdate].[subjectCode] AS [subjectCode], 
+      [View_ResultViewUpdate].[stdName] AS [stdName], 
+      [View_ResultViewUpdate].[stdId] AS [stdId], 
+      [View_ResultViewUpdate].[Total] AS [Total], 
+      [View_ResultViewUpdate].[Final] AS [Final], 
+      [View_ResultViewUpdate].[Quiz] AS [Quiz], 
+      [View_ResultViewUpdate].[className] AS [className], 
+      [View_ResultViewUpdate].[AssignId] AS [AssignId], 
+      [View_ResultViewUpdate].[ResultId] AS [ResultId]
+      FROM [dbo].[View_ResultViewUpdate] AS [View_ResultViewUpdate]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_SubjectLoad" EntityType="SchoolManagementDBModel.Store.View_SubjectLoad" store:Type="Views" store:Schema="dbo" store:Name="View_SubjectLoad">
+            <DefiningQuery>SELECT 
+      [View_SubjectLoad].[AssignId] AS [AssignId], 
+      [View_SubjectLoad].[ClassId] AS [ClassId], 
+      [View_SubjectLoad].[SubjectId] AS [SubjectId], 
+      [View_SubjectLoad].[Teacherid] AS [Teacherid], 
+      [View_SubjectLoad].[subjectCode] AS [subjectCode], 
+      [View_SubjectLoad].[subjectName] AS [subjectName]
+      FROM [dbo].[View_SubjectLoad] AS [View_SubjectLoad]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="tblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdminName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblAssign">
+          <Key>
+            <PropertyRef Name="AssignId" />
+          </Key>
+          <Property Name="AssignId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="Teacherid" Type="int" />
+        </EntityType>
+        <EntityType Name="tblAttendanceCount">
+          <Key>
+            <PropertyRef Name="ACId" />
+          </Key>
+          <Property Name="ACId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Status" Type="int" />
+          <Property Name="DateString" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblAttendanceTotal">
+          <Key>
+            <PropertyRef Name="ATId" />
+          </Key>
+          <Property Name="ATId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="total" Type="int" />
+          <Property Name="present" Type="int" />
+          <Property Name="absent" Type="int" />
+        </EntityType>
+        <EntityType Name="tblClass">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblGuardian">
+          <Key>
+            <PropertyRef Name="GuardianId" />
+          </Key>
+          <Property Name="GuardianId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="guardName" Type="varchar" MaxLength="50" />
+          <Property Name="guardPhone" Type="varchar" MaxLength="50" />
+          <Property Name="guardEmail" Type="varchar" MaxLength="50" />
+          <Property Name="StudentId2" Type="int" />
+          <Property Name="StudentId3" Type="int" />
+          <Property Name="StudentId4" Type="int" />
+          <Property Name="StudentId5" Type="int" />
+        </EntityType>
+        <EntityType Name="tblResult">
+          <Key>
+            <PropertyRef Name="ResultId" />
+          </Key>
+          <Property Name="ResultId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="Quiz" Type="decimal" Scale="2" />
+          <Property Name="Final" Type="decimal" Scale="2" />
+          <Property Name="Total" Type="decimal" Scale="2" />
+          <Property Name="StudentId" Type="int" />
+        </EntityType>
+        <EntityType Name="tblStudent">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="stdBirthDate" Type="datetime" />
+          <Property Name="stdAddress" Type="varchar" MaxLength="50" />
+          <Property Name="stdEmail" Type="varchar" MaxLength="50" />
+          <Property Name="stdFatherName" Type="varchar" MaxLength="50" />
+          <Property Name="stdMotherName" Type="varchar" MaxLength="50" />
+          <Property Name="ClassId" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSubject">
+          <Key>
+            <PropertyRef Name="SubjectId" />
+          </Key>
+          <Property Name="SubjectId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblTeacher">
+          <Key>
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="TeacherId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tchProfileId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="tchName" Type="varchar" MaxLength="50" />
+          <Property Name="tchDesignation" Type="varchar" MaxLength="50" />
+          <Property Name="tchEmail" Type="varchar" MaxLength="50" />
+          <Property Name="tchPhone" Type="varchar" MaxLength="50" />
+          <Property Name="SSC" Type="decimal" Scale="2" />
+          <Property Name="HSC" Type="decimal" Scale="2" />
+          <Property Name="Honors" Type="decimal" Scale="2" />
+          <Property Name="Masters" Type="decimal" Scale="2" />
+          <Property Name="Others" Type="varchar" MaxLength="50" />
+          <Property Name="ClassTeacherId" Type="int" />
+        </EntityType>
+        <EntityType Name="tblUploads">
+          <Key>
+            <PropertyRef Name="UploadId" />
+          </Key>
+          <Property Name="UploadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="upFile" Type="varchar" MaxLength="50" />
+          <Property Name="upName" Type="varchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblUserLoginInfo">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Name="LoginId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="userPassword" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="userRole" Type="varchar" MaxLength="50" />
+          <Property Name="TeacherId" Type="int" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="GuardianId" Type="int" />
+          <Property Name="AdminId" Type="int" />
+          <Property Name="IsApproved" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_1">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="guardName" Type="varchar" MaxLength="50" />
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="stdBirthDate" Type="datetime" />
+          <Property Name="StudentId2" Type="int" />
+          <Property Name="std2" Type="varchar" MaxLength="50" />
+          <Property Name="StudentId3" Type="int" />
+          <Property Name="std3" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_AllResult' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_AllResult">
+          <Key>
+            <PropertyRef Name="ResultId" />
+            <PropertyRef Name="ClassId" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Name="ResultId" Type="int" Nullable="false" />
+          <Property Name="ClassId" Type="int" Nullable="false" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="Quiz" Type="decimal" Scale="2" />
+          <Property Name="Final" Type="decimal" Scale="2" />
+          <Property Name="Total" Type="decimal" Scale="2" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="StudentId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_Assign">
+          <Key>
+            <PropertyRef Name="subjectCode" />
+            <PropertyRef Name="tchProfileId" />
+            <PropertyRef Name="AssignId" />
+          </Key>
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="tchProfileId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="tchName" Type="varchar" MaxLength="50" />
+          <Property Name="AssignId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_Attendance' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_Attendance">
+          <Key>
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="stdId" />
+          </Key>
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="TotalPresent" Type="int" />
+          <Property Name="TotalAbsent" Type="int" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ClassId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.view_Attendance_Count' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="view_Attendance_Count">
+          <Key>
+            <PropertyRef Name="ACId" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="Stat" />
+          </Key>
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="Date2" Type="varchar" MaxLength="10" />
+          <Property Name="Status" Type="int" />
+          <Property Name="ACId" Type="int" Nullable="false" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="Stat" Type="varchar" Nullable="false" MaxLength="7" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_ClassLoad' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_ClassLoad">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="Teacherid" Type="int" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="ClassId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.view_GuardianIsChecked' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="view_GuardianIsChecked">
+          <Key>
+            <PropertyRef Name="GuardianId" />
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Name="GuardianId" Type="int" Nullable="false" />
+          <Property Name="guardName" Type="varchar" MaxLength="50" />
+          <Property Name="guardPhone" Type="varchar" MaxLength="50" />
+          <Property Name="IsApproved" Type="int" />
+          <Property Name="guardEmail" Type="varchar" MaxLength="50" />
+          <Property Name="LoginId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_ResultInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_ResultInfo">
+          <Key>
+            <PropertyRef Name="ResultId" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Name="ResultId" Type="int" Nullable="false" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="Quiz" Type="decimal" Scale="2" />
+          <Property Name="Final" Type="decimal" Scale="2" />
+          <Property Name="Total" Type="decimal" Scale="2" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="ClassId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_ResultView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_ResultView">
+          <Key>
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="ResultId" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="Expr2" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Quiz" Type="decimal" Scale="2" />
+          <Property Name="Final" Type="decimal" Scale="2" />
+          <Property Name="Total" Type="decimal" Scale="2" />
+          <Property Name="ResultId" Type="int" Nullable="false" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="Expr1" Type="int" Nullable="false" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="Expr2" Type="int" Nullable="false" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_ResultViewUpdate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_ResultViewUpdate">
+          <Key>
+            <PropertyRef Name="subjectCode" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="AssignId" />
+            <PropertyRef Name="ResultId" />
+          </Key>
+          <Property Name="Teacherid" Type="int" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="stdName" Type="varchar" MaxLength="50" />
+          <Property Name="stdId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Total" Type="decimal" Scale="2" />
+          <Property Name="Final" Type="decimal" Scale="2" />
+          <Property Name="Quiz" Type="decimal" Scale="2" />
+          <Property Name="className" Type="varchar" MaxLength="50" />
+          <Property Name="AssignId" Type="int" Nullable="false" />
+          <Property Name="ResultId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SchoolManagementDB.dbo.View_SubjectLoad' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_SubjectLoad">
+          <Key>
+            <PropertyRef Name="AssignId" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Name="AssignId" Type="int" Nullable="false" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="SubjectId" Type="int" />
+          <Property Name="Teacherid" Type="int" />
+          <Property Name="subjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="subjectName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'SchoolManagementDB.dbo.View_Class1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="View_Class1">
+        <Property Name="stdName" Type="varchar" MaxLength="50" />
+        <Property Name="stdEmail" Type="varchar" MaxLength="50" />
+        <Property Name="stdMotherName" Type="varchar" MaxLength="50" />
+        <Property Name="stdFatherName" Type="varchar" MaxLength="50" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SchoolManagementDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SchoolManagementDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAdmins" EntityType="SchoolManagementDBModel.tblAdmin" />
+          <EntitySet Name="tblAssigns" EntityType="SchoolManagementDBModel.tblAssign" />
+          <EntitySet Name="tblAttendanceCounts" EntityType="SchoolManagementDBModel.tblAttendanceCount" />
+          <EntitySet Name="tblAttendanceTotals" EntityType="SchoolManagementDBModel.tblAttendanceTotal" />
+          <EntitySet Name="tblClasses" EntityType="SchoolManagementDBModel.tblClass" />
+          <EntitySet Name="tblGuardians" EntityType="SchoolManagementDBModel.tblGuardian" />
+          <EntitySet Name="tblResults" EntityType="SchoolManagementDBModel.tblResult" />
+          <EntitySet Name="tblStudents" EntityType="SchoolManagementDBModel.tblStudent" />
+          <EntitySet Name="tblSubjects" EntityType="SchoolManagementDBModel.tblSubject" />
+          <EntitySet Name="tblTeachers" EntityType="SchoolManagementDBModel.tblTeacher" />
+          <EntitySet Name="tblUploads" EntityType="SchoolManagementDBModel.tblUpload" />
+          <EntitySet Name="tblUserLoginInfoes" EntityType="SchoolManagementDBModel.tblUserLoginInfo" />
+          <EntitySet Name="View_1" EntityType="SchoolManagementDBModel.View_1" />
+          <EntitySet Name="View_AllResult" EntityType="SchoolManagementDBModel.View_AllResult" />
+          <EntitySet Name="View_Assign" EntityType="SchoolManagementDBModel.View_Assign" />
+          <EntitySet Name="View_Attendance" EntityType="SchoolManagementDBModel.View_Attendance" />
+          <EntitySet Name="view_Attendance_Count" EntityType="SchoolManagementDBModel.view_Attendance_Count" />
+          <EntitySet Name="View_ClassLoad" EntityType="SchoolManagementDBModel.View_ClassLoad" />
+          <EntitySet Name="view_GuardianIsChecked" EntityType="SchoolManagementDBModel.view_GuardianIsChecked" />
+          <EntitySet Name="View_ResultInfo" EntityType="SchoolManagementDBModel.View_ResultInfo" />
+          <EntitySet Name="View_ResultView" EntityType="SchoolManagementDBModel.View_ResultView" />
+          <EntitySet Name="View_ResultViewUpdate" EntityType="SchoolManagementDBModel.View_ResultViewUpdate" />
+          <EntitySet Name="View_SubjectLoad" EntityType="SchoolManagementDBModel.View_SubjectLoad" />
+        </EntityContainer>
+        <EntityType Name="tblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Type="Int32" Name="AdminId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AdminName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblAssign">
+          <Key>
+            <PropertyRef Name="AssignId" />
+          </Key>
+          <Property Type="Int32" Name="AssignId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Int32" Name="Teacherid" />
+        </EntityType>
+        <EntityType Name="tblAttendanceCount">
+          <Key>
+            <PropertyRef Name="ACId" />
+          </Key>
+          <Property Type="Int32" Name="ACId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="StudentId" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="String" Name="DateString" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblAttendanceTotal">
+          <Key>
+            <PropertyRef Name="ATId" />
+          </Key>
+          <Property Type="Int32" Name="ATId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="StudentId" Nullable="false" />
+          <Property Type="Int32" Name="total" />
+          <Property Type="Int32" Name="present" />
+          <Property Type="Int32" Name="absent" />
+        </EntityType>
+        <EntityType Name="tblClass">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Type="Int32" Name="ClassId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblGuardian">
+          <Key>
+            <PropertyRef Name="GuardianId" />
+          </Key>
+          <Property Type="Int32" Name="GuardianId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="StudentId" Nullable="false" />
+          <Property Type="String" Name="guardName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="guardPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="guardEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StudentId2" />
+          <Property Type="Int32" Name="StudentId3" />
+          <Property Type="Int32" Name="StudentId4" />
+          <Property Type="Int32" Name="StudentId5" />
+        </EntityType>
+        <EntityType Name="tblResult">
+          <Key>
+            <PropertyRef Name="ResultId" />
+          </Key>
+          <Property Type="Int32" Name="ResultId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="StudentId" />
+        </EntityType>
+        <EntityType Name="tblStudent">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Type="Int32" Name="StudentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="stdBirthDate" />
+          <Property Type="String" Name="stdAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdFatherName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdMotherName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClassId" />
+        </EntityType>
+        <EntityType Name="tblSubject">
+          <Key>
+            <PropertyRef Name="SubjectId" />
+          </Key>
+          <Property Type="Int32" Name="SubjectId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblTeacher">
+          <Key>
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Type="Int32" Name="TeacherId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="tchProfileId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tchName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tchDesignation" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tchEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tchPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="SSC" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HSC" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Honors" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Masters" Precision="18" Scale="2" />
+          <Property Type="String" Name="Others" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClassTeacherId" />
+        </EntityType>
+        <EntityType Name="tblUpload">
+          <Key>
+            <PropertyRef Name="UploadId" />
+          </Key>
+          <Property Type="Int32" Name="UploadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="upFile" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="upName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date" />
+        </EntityType>
+        <EntityType Name="tblUserLoginInfo">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Type="Int32" Name="LoginId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="userName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="userPassword" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="userRole" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TeacherId" />
+          <Property Type="Int32" Name="StudentId" />
+          <Property Type="Int32" Name="GuardianId" />
+          <Property Type="Int32" Name="AdminId" />
+          <Property Type="Int32" Name="IsApproved" />
+        </EntityType>
+        <EntityType Name="View_1">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Type="Int32" Name="StudentId" Nullable="false" />
+          <Property Type="String" Name="guardName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="stdBirthDate" />
+          <Property Type="Int32" Name="StudentId2" />
+          <Property Type="String" Name="std2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StudentId3" />
+          <Property Type="String" Name="std3" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="View_AllResult">
+          <Key>
+            <PropertyRef Name="ResultId" />
+            <PropertyRef Name="ClassId" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Type="Int32" Name="ResultId" Nullable="false" />
+          <Property Type="Int32" Name="ClassId" Nullable="false" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Int32" Name="StudentId" />
+        </EntityType>
+        <EntityType Name="View_Assign">
+          <Key>
+            <PropertyRef Name="subjectCode" />
+            <PropertyRef Name="tchProfileId" />
+            <PropertyRef Name="AssignId" />
+          </Key>
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tchProfileId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tchName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AssignId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="View_Attendance">
+          <Key>
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="stdId" />
+          </Key>
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TotalPresent" />
+          <Property Type="Int32" Name="TotalAbsent" />
+          <Property Type="Int32" Name="StudentId" Nullable="false" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClassId" />
+        </EntityType>
+        <EntityType Name="view_Attendance_Count">
+          <Key>
+            <PropertyRef Name="ACId" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="Stat" />
+          </Key>
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Date2" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="Int32" Name="ACId" Nullable="false" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StudentId" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="String" Name="Stat" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="View_ClassLoad">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Type="Int32" Name="Teacherid" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClassId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="view_GuardianIsChecked">
+          <Key>
+            <PropertyRef Name="GuardianId" />
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Type="Int32" Name="GuardianId" Nullable="false" />
+          <Property Type="String" Name="guardName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="guardPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsApproved" />
+          <Property Type="String" Name="guardEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="LoginId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="View_ResultInfo">
+          <Key>
+            <PropertyRef Name="ResultId" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Type="Int32" Name="ResultId" Nullable="false" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Int32" Name="ClassId" />
+        </EntityType>
+        <EntityType Name="View_ResultView">
+          <Key>
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="ResultId" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="Expr2" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="ResultId" Nullable="false" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="Int32" Name="Expr1" Nullable="false" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Int32" Name="StudentId" Nullable="false" />
+          <Property Type="Int32" Name="Expr2" Nullable="false" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="View_ResultViewUpdate">
+          <Key>
+            <PropertyRef Name="subjectCode" />
+            <PropertyRef Name="stdId" />
+            <PropertyRef Name="AssignId" />
+            <PropertyRef Name="ResultId" />
+          </Key>
+          <Property Type="Int32" Name="Teacherid" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stdId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Total" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Final" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quiz" Precision="18" Scale="2" />
+          <Property Type="String" Name="className" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AssignId" Nullable="false" />
+          <Property Type="Int32" Name="ResultId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="View_SubjectLoad">
+          <Key>
+            <PropertyRef Name="AssignId" />
+            <PropertyRef Name="subjectCode" />
+          </Key>
+          <Property Type="Int32" Name="AssignId" Nullable="false" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="Int32" Name="SubjectId" />
+          <Property Type="Int32" Name="Teacherid" />
+          <Property Type="String" Name="subjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="subjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SchoolManagementDBModelStoreContainer" CdmEntityContainer="SchoolManagementDBEntities">
+          <EntitySetMapping Name="tblAdmins">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblAdmin">
+              <MappingFragment StoreEntitySet="tblAdmin">
+                <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAssigns">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblAssign">
+              <MappingFragment StoreEntitySet="tblAssign">
+                <ScalarProperty Name="Teacherid" ColumnName="Teacherid" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAttendanceCounts">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblAttendanceCount">
+              <MappingFragment StoreEntitySet="tblAttendanceCount">
+                <ScalarProperty Name="DateString" ColumnName="DateString" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="ACId" ColumnName="ACId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAttendanceTotals">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblAttendanceTotal">
+              <MappingFragment StoreEntitySet="tblAttendanceTotal">
+                <ScalarProperty Name="absent" ColumnName="absent" />
+                <ScalarProperty Name="present" ColumnName="present" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="ATId" ColumnName="ATId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblClasses">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblClass">
+              <MappingFragment StoreEntitySet="tblClass">
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblGuardians">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblGuardian">
+              <MappingFragment StoreEntitySet="tblGuardian">
+                <ScalarProperty Name="StudentId5" ColumnName="StudentId5" />
+                <ScalarProperty Name="StudentId4" ColumnName="StudentId4" />
+                <ScalarProperty Name="StudentId3" ColumnName="StudentId3" />
+                <ScalarProperty Name="StudentId2" ColumnName="StudentId2" />
+                <ScalarProperty Name="guardEmail" ColumnName="guardEmail" />
+                <ScalarProperty Name="guardPhone" ColumnName="guardPhone" />
+                <ScalarProperty Name="guardName" ColumnName="guardName" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="GuardianId" ColumnName="GuardianId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblResults">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblResult">
+              <MappingFragment StoreEntitySet="tblResult">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Quiz" ColumnName="Quiz" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStudents">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblStudent">
+              <MappingFragment StoreEntitySet="tblStudent">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="stdMotherName" ColumnName="stdMotherName" />
+                <ScalarProperty Name="stdFatherName" ColumnName="stdFatherName" />
+                <ScalarProperty Name="stdEmail" ColumnName="stdEmail" />
+                <ScalarProperty Name="stdAddress" ColumnName="stdAddress" />
+                <ScalarProperty Name="stdBirthDate" ColumnName="stdBirthDate" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSubjects">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblSubject">
+              <MappingFragment StoreEntitySet="tblSubject">
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTeachers">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblTeacher">
+              <MappingFragment StoreEntitySet="tblTeacher">
+                <ScalarProperty Name="ClassTeacherId" ColumnName="ClassTeacherId" />
+                <ScalarProperty Name="Others" ColumnName="Others" />
+                <ScalarProperty Name="Masters" ColumnName="Masters" />
+                <ScalarProperty Name="Honors" ColumnName="Honors" />
+                <ScalarProperty Name="HSC" ColumnName="HSC" />
+                <ScalarProperty Name="SSC" ColumnName="SSC" />
+                <ScalarProperty Name="tchPhone" ColumnName="tchPhone" />
+                <ScalarProperty Name="tchEmail" ColumnName="tchEmail" />
+                <ScalarProperty Name="tchDesignation" ColumnName="tchDesignation" />
+                <ScalarProperty Name="tchName" ColumnName="tchName" />
+                <ScalarProperty Name="tchProfileId" ColumnName="tchProfileId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUploads">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblUpload">
+              <MappingFragment StoreEntitySet="tblUploads">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="upName" ColumnName="upName" />
+                <ScalarProperty Name="upFile" ColumnName="upFile" />
+                <ScalarProperty Name="UploadId" ColumnName="UploadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserLoginInfoes">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.tblUserLoginInfo">
+              <MappingFragment StoreEntitySet="tblUserLoginInfo">
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="GuardianId" ColumnName="GuardianId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="userRole" ColumnName="userRole" />
+                <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_1">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_1">
+              <MappingFragment StoreEntitySet="View_1">
+                <ScalarProperty Name="std3" ColumnName="std3" />
+                <ScalarProperty Name="StudentId3" ColumnName="StudentId3" />
+                <ScalarProperty Name="std2" ColumnName="std2" />
+                <ScalarProperty Name="StudentId2" ColumnName="StudentId2" />
+                <ScalarProperty Name="stdBirthDate" ColumnName="stdBirthDate" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+                <ScalarProperty Name="guardName" ColumnName="guardName" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_AllResult">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_AllResult">
+              <MappingFragment StoreEntitySet="View_AllResult">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Quiz" ColumnName="Quiz" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_Assign">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_Assign">
+              <MappingFragment StoreEntitySet="View_Assign">
+                <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+                <ScalarProperty Name="tchName" ColumnName="tchName" />
+                <ScalarProperty Name="tchProfileId" ColumnName="tchProfileId" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_Attendance">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_Attendance">
+              <MappingFragment StoreEntitySet="View_Attendance">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="TotalAbsent" ColumnName="TotalAbsent" />
+                <ScalarProperty Name="TotalPresent" ColumnName="TotalPresent" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_Attendance_Count">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.view_Attendance_Count">
+              <MappingFragment StoreEntitySet="view_Attendance_Count">
+                <ScalarProperty Name="Stat" ColumnName="Stat" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="ACId" ColumnName="ACId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date2" ColumnName="Date2" />
+                <ScalarProperty Name="className" ColumnName="className" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ClassLoad">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_ClassLoad">
+              <MappingFragment StoreEntitySet="View_ClassLoad">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="Teacherid" ColumnName="Teacherid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_GuardianIsChecked">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.view_GuardianIsChecked">
+              <MappingFragment StoreEntitySet="view_GuardianIsChecked">
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="guardEmail" ColumnName="guardEmail" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="guardPhone" ColumnName="guardPhone" />
+                <ScalarProperty Name="guardName" ColumnName="guardName" />
+                <ScalarProperty Name="GuardianId" ColumnName="GuardianId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ResultInfo">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_ResultInfo">
+              <MappingFragment StoreEntitySet="View_ResultInfo">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Quiz" ColumnName="Quiz" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ResultView">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_ResultView">
+              <MappingFragment StoreEntitySet="View_ResultView">
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Quiz" ColumnName="Quiz" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ResultViewUpdate">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_ResultViewUpdate">
+              <MappingFragment StoreEntitySet="View_ResultViewUpdate">
+                <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+                <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="Quiz" ColumnName="Quiz" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="stdId" ColumnName="stdId" />
+                <ScalarProperty Name="stdName" ColumnName="stdName" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="Teacherid" ColumnName="Teacherid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_SubjectLoad">
+            <EntityTypeMapping TypeName="SchoolManagementDBModel.View_SubjectLoad">
+              <MappingFragment StoreEntitySet="View_SubjectLoad">
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="subjectCode" ColumnName="subjectCode" />
+                <ScalarProperty Name="Teacherid" ColumnName="Teacherid" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SchoolManagement" ZoomLevel="74">
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblAdmin" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblAssign" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblAttendanceCount" Width="1.5" PointX="0.75" PointY="3.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblAttendanceTotal" Width="1.5" PointX="2.75" PointY="3.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblClass" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblGuardian" Width="1.5" PointX="4.75" PointY="3.75" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblResult" Width="1.5" PointX="6.75" PointY="0.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblStudent" Width="1.5" PointX="0.75" PointY="6.75" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblSubject" Width="1.5" PointX="6.75" PointY="4.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblTeacher" Width="1.5" PointX="2.75" PointY="7.75" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblUpload" Width="1.5" PointX="4.75" PointY="7.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.tblUserLoginInfo" Width="1.5" PointX="6.75" PointY="7.75" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_1" Width="1.5" PointX="8.75" PointY="0.75" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_AllResult" Width="1.5" PointX="8.75" PointY="4.75" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_Assign" Width="1.5" PointX="8.75" PointY="9.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_Attendance" Width="1.5" PointX="10.75" PointY="0.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.view_Attendance_Count" Width="1.5" PointX="10.75" PointY="3.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_ClassLoad" Width="1.5" PointX="10.75" PointY="7.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.view_GuardianIsChecked" Width="1.5" PointX="10.75" PointY="10.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_ResultInfo" Width="1.5" PointX="4.75" PointY="11.75" Height="3.1340950520833246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_ResultView" Width="1.5" PointX="12.75" PointY="0.75" Height="3.7109993489583246" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_ResultViewUpdate" Width="1.5" PointX="0.75" PointY="12.75" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="SchoolManagementDBModel.View_SubjectLoad" Width="1.5" PointX="12.75" PointY="5.75" Height="2.1725878906249818" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

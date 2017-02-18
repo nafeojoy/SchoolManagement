@@ -1,0 +1,170 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="SchoolManagementProject.Forms.Student" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../Styles/Bootstrap2.css" type="text/css" />
+
+    <script type="text/javascript" src="../Scripts/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+    <%-- <link href="../Styles/jquery.datepick.css" rel="stylesheet" type="text/css" />   
+    --%>
+    <script type="text/javascript" src="../Scripts/jquery.datepick.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-2.1.4.js"></script>
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>School Management System</title>
+    <link href="../Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Styles/simple-sidebar.css" rel="stylesheet" />
+    <link href="../font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Styles/Customized.css" />
+    <link href="../Styles/jquery.datepick.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../Styles/datepicker.css">
+    <script type="text/javascript" src="../Scripts/nafeo.js"></script>
+    <script type="text/javascript">
+
+        $(document).on("click", "label.mytxt", function () {
+            var txt = $(".mytxt").text();
+            $(".mytxt").replaceWith("<input class='mytxt'/>");
+            $(".mytxt").val(txt);
+        });
+
+        $(document).on("blur", "input.mytxt", function () {
+            var txt = $(this).val();
+            $(this).replaceWith("<label class='mytxt'></label>");
+            $(".mytxt").text(txt);
+        });
+
+
+    </script>
+    <%--   <script type="text/javascript">
+         $(function () {
+             $('.DatePicker1').datepick({ dateFormat: 'dd/mm/yyyy' });
+             $('.DatePicker2').datepick({ dateFormat: 'dd/mm/yyyy' });
+             $('.DatePicker3').datepick({ dateFormat: 'dd/mm/yyyy' });
+         });   
+         
+    </script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar navbar-default no-margin">
+    <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header fixed-brand">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">
+                      <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                    </button>
+                 
+
+                    <a class="navbar-brand" href="frmHome.aspx"><i class="fa fa-university fa-4"></i> School Management</a>
+                </div><!-- navbar-header-->
+ 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+
+                             
+                                <li class="active" ><button class="navbar-toggle collapse in" id="menu-toggle-2"> 
+                                <span class="glyphicons glyphicons-embed"></span></button></li>
+                            </ul>
+
+                        <asp:Label style="float:right; font-family:Century Gothic; padding:6px; margin:14px; font-size: small" ID="lblUser" runat="server" Text="Label"></asp:Label>
+                       <asp:Label ID="currentDate" runat="server" Text="" style="float:right; font-family:Century Gothic; padding:6px; margin:14px; font-size: small" ></asp:Label>   
+                                      <asp:Button ID="btnLogOut" runat="server" Text="Log Out" 
+                              class="btn btn-small btn-danger" onclick="btnStudentRegister_Click" style="float:right; padding:6px; margin:14px" />
+                
+                </div><!-- bs-example-navbar-collapse-1 -->
+    </nav>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                <%--  <li id="reglog" class="active" runat="server"><a href="SignIn.aspx"><span class="fa-stack fa-lg pull-left"><i
+                    class="fa fa-bookmark-o fa-stack-1x "></i></span>Login</a> </li>--%>
+                <li id="TagregistrationTag" runat="server"><a href="frmRegistration.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-get-pocket fa-stack-1x "></i></span>Register Users</a> </li>
+                <li id="TagGuardRegTag" runat="server"><a href="frmGuardianRegistration.aspx"><span
+                    class="fa-stack fa-lg pull-left"><i class="fa fa-get-pocket fa-stack-1x "></i></span>
+                    Guardian Registration</a> </li>
+                <li id="tagCreateSubject" runat="server"><a href="frmCreateSubject.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-get-pocket fa-stack-1x "></i></span>Create Subject</a> </li>
+                <li id="TagcreateClassTag" runat="server"><a href="frmCreateClass.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-get-pocket fa-stack-1x "></i></span>Create Class</a> </li>
+                <li id="TagsubjectAssignTag" runat="server"><a href="frmSubjectAssign.aspx"><span
+                    class="fa-stack fa-lg pull-left"><i class="fa fa-empire fa-stack-1x "></i></span>
+                    Assign Subject</a> </li>
+                <li id="TagattendaceTag" runat="server"><a href="frmAttendanceCount.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-get-pocket fa-stack-1x "></i></span>Daily Attendance Entry</a>
+                </li>
+                <li id="TagattendanceHistoryTag" runat="server"><a href="frmAttendanceHistory.aspx">
+                    <span class="fa-stack fa-lg pull-left"><i class="fa fa-bar-chart fa-stack-1x "></i>
+                    </span>Attendance History</a> </li>
+                <li id="TagresultEntryTag" runat="server"><a href="frmResultEntry.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-get-pocket fa-stack-1x "></i></span>Result Entry/Edit</a> </li>
+                <li id="TagAllResultStudnet" runat="server"><a href="frmAllResultStudent.aspx"><span
+                    class="fa-stack fa-lg pull-left"><i class="fa fa-binoculars fa-stack-1x "></i></span>
+                    Result(Class/Student)</a> </li>
+                <li id="TagResultView" runat="server"><a href="frmAllResult.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-binoculars fa-stack-1x "></i></span>All Student Result View</a>
+                </li>
+                <li id="TagstudentInfoTag" runat="server"><a href="frmStudentInfo.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-user fa-stack-1x "></i></span>Student Info</a> </li>
+                <li id="TagteacherInfoTag" runat="server"><a href="frmTeacherInfo.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-user fa-stack-1x "></i></span>Teacher Info</a> </li>
+                <li id="TagguardianInfoTag" runat="server"><a href="frmGuardianInfo.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-user fa-stack-1x "></i></span>Guardian Info</a> </li>
+                <li id="TagAllTeacherInfo" runat="server"><a href="frmAllTeacherInfo.aspx"><span
+                    class="fa-stack fa-lg pull-left"><i class="fa fa-user fa-stack-1x "></i></span>All
+                    Teacher Info</a> </li>
+                <%--<li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x ">
+                </i></span>Shortcut</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type: none;">
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x ">
+                        </i></span>link1</a></li>
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x ">
+                        </i></span>link2</a></li>
+                    </ul>
+                </li>--%>
+                <%--<li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x ">
+                </i></span>About</a> </li>--%>
+                <li><a href="frmContact.aspx"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x ">
+                </i></span>Contact</a> </li>
+                <li id="Li1" runat="server"><a href="frmNoticeUpload.aspx"><span class="fa-stack fa-lg pull-left">
+                    <i class="fa fa-server fa-stack-1x "></i></span>Notice Board</a> </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid xyz">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Scripts/sidebar_menu.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>

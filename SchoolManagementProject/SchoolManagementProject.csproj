@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18BE5A8E-01DB-4766-A12F-0A8565E80439}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolManagementProject</RootNamespace>
+    <AssemblyName>SchoolManagementProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>D:\Monsur Vai\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\SchoolManagementProject.dll" />
+    <Content Include="bin\SchoolManagementProject.pdb" />
+    <Content Include="Forms\CS.aspx" />
+    <Content Include="Forms\frmAllResult.aspx" />
+    <Content Include="Forms\frmAllResultStudent.aspx" />
+    <Content Include="Forms\frmContact.aspx" />
+    <Content Include="Forms\frmGuardianRegistration.aspx" />
+    <Content Include="Forms\frmNoticeUpload.aspx" />
+    <Content Include="Forms\tryGridExport.aspx" />
+    <Content Include="NameSearch.asmx" />
+    <Content Include="Properties\Content\bootstrap.cosmo.css" />
+    <Content Include="Properties\Content\bootstrap.cosmo.min.css" />
+    <Content Include="font-awesome-4.4.0\css\font-awesome.css" />
+    <Content Include="font-awesome-4.4.0\css\font-awesome.min.css" />
+    <Content Include="font-awesome-4.4.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="font-awesome-4.4.0\HELP-US-OUT.txt" />
+    <Content Include="Forms\frmAllTeacherInfo.aspx" />
+    <Content Include="Forms\frmAttendanceCount.aspx" />
+    <Content Include="Forms\frmAttendanceHistory.aspx" />
+    <Content Include="Forms\frmCreateClass.aspx" />
+    <Content Include="Forms\frmCreateSubject.aspx" />
+    <Content Include="Forms\frmGuardianInfo.aspx" />
+    <Content Include="Forms\frmHome.aspx" />
+    <Content Include="Forms\frmRegistration.aspx" />
+    <Content Include="Forms\frmResultEntry.aspx" />
+    <Content Include="Forms\frmSchoolContact.aspx" />
+    <Content Include="Forms\frmStudentInfo.aspx" />
+    <Content Include="Forms\frmSubjectAssign.aspx" />
+    <Content Include="Forms\frmTeacherInfo.aspx" />
+    <Content Include="Forms\Student.Master" />
+    <Content Include="Images\Animated_Flag_of_Bangladesh.gif" />
+    <Content Include="Images\blue_button.png" />
+    <Content Include="Images\button.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\founder-chairman.jpg" />
+    <Content Include="Images\green_button.png" />
+    <Content Include="Images\image1.jpeg" />
+    <Content Include="Images\image2.jpg" />
+    <Content Include="Images\image3.jpg" />
+    <Content Include="Images\image5.jpg" />
+    <Content Include="Images\image6.jpg" />
+    <Content Include="Images\image9.JPG" />
+    <Content Include="Images\loadingAnim.gif" />
+    <Content Include="Images\rsz_image1.jpg" />
+    <Content Include="Images\rsz_image2.jpg" />
+    <Content Include="Images\s1.jpg" />
+    <Content Include="Images\s2.jpg" />
+    <Content Include="Images\s3.jpg" />
+    <Content Include="Images\sea.jpg" />
+    <Content Include="Images\Square tex.gif" />
+    <Content Include="Images\squaretex.png" />
+    <Content Include="Images\title2.png" />
+    <Content Include="Images\title3.ico" />
+    <Content Include="obj\Debug\SchoolManagementProject.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SchoolManagementProject.dll" />
+    <Content Include="obj\Debug\SchoolManagementProject.pdb" />
+    <Content Include="Global.asax" />
+    <Content Include="ReportUI\WebForm1.aspx" />
+    <Content Include="ReportUI\WebForm2.aspx" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ChunkFive_400.font.js" />
+    <Content Include="Scripts\cufon-yui.js" />
+    <Content Include="Scripts\datapick.js" />
+    <Content Include="Scripts\EnterPress.js" />
+    <Content Include="Scripts\gridviewScroll.min.js" />
+    <Content Include="Scripts\InlineEdit.js" />
+    <Content Include="Scripts\InlineEdit1.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.datepick.js" />
+    <Content Include="Scripts\jquery.datepick.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
+    <Content Include="Scripts\kendo.common.min.css" />
+    <Content Include="Scripts\MenuItemHide.js" />
+    <Content Include="Scripts\nafeo.js" />
+    <Content Include="Scripts\ScrollableGridPlugin.js" />
+    <Content Include="Scripts\sidebar_menu.js" />
+    <Content Include="Scripts\textBoxReadOnly.js" />
+    <Content Include="Scripts\Validator.js" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\Bootstrap2.css" />
+    <Content Include="Styles\Customized.css" />
+    <Content Include="Styles\datepicker.css" />
+    <Content Include="Styles\Glyphicons.css" />
+    <Content Include="Styles\GridviewScroll.css" />
+    <Content Include="Styles\jquery.datepick.css" />
+    <Content Include="Styles\kendo.common.min.css" />
+    <Content Include="Styles\login-box.css" />
+    <Content Include="Styles\simple-sidebar.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Styles\StyleSheet1.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Load.cs" />
+    <Compile Include="Forms\CS.aspx.cs">
+      <DependentUpon>CS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CS.aspx.designer.cs">
+      <DependentUpon>CS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAllResult.aspx.cs">
+      <DependentUpon>frmAllResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAllResult.aspx.designer.cs">
+      <DependentUpon>frmAllResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAllResultStudent.aspx.cs">
+      <DependentUpon>frmAllResultStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAllResultStudent.aspx.designer.cs">
+      <DependentUpon>frmAllResultStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAllTeacherInfo.aspx.cs">
+      <DependentUpon>frmAllTeacherInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAllTeacherInfo.aspx.designer.cs">
+      <DependentUpon>frmAllTeacherInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAttendanceCount.aspx.cs">
+      <DependentUpon>frmAttendanceCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAttendanceCount.aspx.designer.cs">
+      <DependentUpon>frmAttendanceCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAttendanceHistory.aspx.cs">
+      <DependentUpon>frmAttendanceHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAttendanceHistory.aspx.designer.cs">
+      <DependentUpon>frmAttendanceHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContact.aspx.cs">
+      <DependentUpon>frmContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContact.aspx.designer.cs">
+      <DependentUpon>frmContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateClass.aspx.cs">
+      <DependentUpon>frmCreateClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateClass.aspx.designer.cs">
+      <DependentUpon>frmCreateClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateSubject.aspx.cs">
+      <DependentUpon>frmCreateSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateSubject.aspx.designer.cs">
+      <DependentUpon>frmCreateSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGuardianInfo.aspx.cs">
+      <DependentUpon>frmGuardianInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGuardianInfo.aspx.designer.cs">
+      <DependentUpon>frmGuardianInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGuardianRegistration.aspx.cs">
+      <DependentUpon>frmGuardianRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGuardianRegistration.aspx.designer.cs">
+      <DependentUpon>frmGuardianRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHome.aspx.cs">
+      <DependentUpon>frmHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHome.aspx.designer.cs">
+      <DependentUpon>frmHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNoticeUpload.aspx.cs">
+      <DependentUpon>frmNoticeUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNoticeUpload.aspx.designer.cs">
+      <DependentUpon>frmNoticeUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegistration.aspx.cs">
+      <DependentUpon>frmRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegistration.aspx.designer.cs">
+      <DependentUpon>frmRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmResultEntry.aspx.cs">
+      <DependentUpon>frmResultEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmResultEntry.aspx.designer.cs">
+      <DependentUpon>frmResultEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolContact.aspx.cs">
+      <DependentUpon>frmSchoolContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchoolContact.aspx.designer.cs">
+      <DependentUpon>frmSchoolContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStudentInfo.aspx.cs">
+      <DependentUpon>frmStudentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStudentInfo.aspx.designer.cs">
+      <DependentUpon>frmStudentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubjectAssign.aspx.cs">
+      <DependentUpon>frmSubjectAssign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubjectAssign.aspx.designer.cs">
+      <DependentUpon>frmSubjectAssign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTeacherInfo.aspx.cs">
+      <DependentUpon>frmTeacherInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTeacherInfo.aspx.designer.cs">
+      <DependentUpon>frmTeacherInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student.Master.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Student.Master.designer.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tryGridExport.aspx.cs">
+      <DependentUpon>tryGridExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\tryGridExport.aspx.designer.cs">
+      <DependentUpon>tryGridExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NameSearch.asmx.cs">
+      <DependentUpon>NameSearch.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportUI\crptStudent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptStudent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportUI\reportMaster.Master.cs">
+      <DependentUpon>reportMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportUI\reportMaster.Master.designer.cs">
+      <DependentUpon>reportMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ReportUI\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportUI\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportUI\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportUI\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="font-awesome-4.4.0\fonts\fontawesome-webfont.eot" />
+    <None Include="font-awesome-4.4.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="font-awesome-4.4.0\fonts\fontawesome-webfont.woff" />
+    <None Include="font-awesome-4.4.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="font-awesome-4.4.0\fonts\FontAwesome.otf" />
+    <None Include="font-awesome-4.4.0\less\animated.less" />
+    <None Include="font-awesome-4.4.0\less\bordered-pulled.less" />
+    <None Include="font-awesome-4.4.0\less\core.less" />
+    <None Include="font-awesome-4.4.0\less\fixed-width.less" />
+    <None Include="font-awesome-4.4.0\less\font-awesome.less" />
+    <None Include="font-awesome-4.4.0\less\icons.less" />
+    <None Include="font-awesome-4.4.0\less\larger.less" />
+    <None Include="font-awesome-4.4.0\less\list.less" />
+    <None Include="font-awesome-4.4.0\less\mixins.less" />
+    <None Include="font-awesome-4.4.0\less\path.less" />
+    <None Include="font-awesome-4.4.0\less\rotated-flipped.less" />
+    <None Include="font-awesome-4.4.0\less\stacked.less" />
+    <None Include="font-awesome-4.4.0\less\variables.less" />
+    <None Include="font-awesome-4.4.0\scss\font-awesome.scss" />
+    <None Include="font-awesome-4.4.0\scss\_animated.scss" />
+    <None Include="font-awesome-4.4.0\scss\_bordered-pulled.scss" />
+    <None Include="font-awesome-4.4.0\scss\_core.scss" />
+    <None Include="font-awesome-4.4.0\scss\_fixed-width.scss" />
+    <None Include="font-awesome-4.4.0\scss\_icons.scss" />
+    <None Include="font-awesome-4.4.0\scss\_larger.scss" />
+    <None Include="font-awesome-4.4.0\scss\_list.scss" />
+    <None Include="font-awesome-4.4.0\scss\_mixins.scss" />
+    <None Include="font-awesome-4.4.0\scss\_path.scss" />
+    <None Include="font-awesome-4.4.0\scss\_rotated-flipped.scss" />
+    <None Include="font-awesome-4.4.0\scss\_stacked.scss" />
+    <None Include="font-awesome-4.4.0\scss\_variables.scss" />
+    <None Include="Forms\Assingments.xls" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="ReportUI\reportMaster.Master" />
+    <None Include="Reports\crptStudent.mht" />
+    <None Include="SchoolManagementDS.xsc">
+      <DependentUpon>SchoolManagementDS.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SchoolManagementDS.xss">
+      <DependentUpon>SchoolManagementDS.xsd</DependentUpon>
+    </None>
+    <None Include="Sheets\GridView.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolManagementLibrary\SchoolManagementLibrary.csproj">
+      <Project>{1006686C-3896-490C-B016-03D00DE4BBCA}</Project>
+      <Name>SchoolManagementLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\rptStudentInfo.rdlc" />
+    <EmbeddedResource Include="ReportUI\crptStudent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptStudent.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50696</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

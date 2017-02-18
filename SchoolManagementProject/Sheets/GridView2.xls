@@ -1,0 +1,43 @@
+<div>
+	<table class="table table-striped table-bordered table-hover" cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_grdResultAdd" style="width:100%;border-collapse:collapse;margin: 10px; padding: 10px">
+		<tr>
+			<th scope="col">Student ID</th><th scope="col">Student Name</th><th scope="col">Quiz</th><th scope="col">Final</th><th scope="col">Total</th><th scope="col">stdName</th><th scope="col">stdId</th><th scope="col">Quiz</th><th scope="col">Final</th><th scope="col">Total</th><th scope="col">ResultId</th><th scope="col">ClassId</th><th scope="col">Expr1</th><th scope="col">className</th><th scope="col">SubjectId</th><th scope="col">StudentId</th><th scope="col">Expr2</th><th scope="col">subjectCode</th><th scope="col">subjectName</th>
+		</tr><tr>
+			<td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl02$txtStdId" type="text" value="std-103" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtStdId_0" style="border: none" />
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl02$txtStdName" type="text" value="Akitur Rahman" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtStdName_0" style="border: none" />
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl02$txtQuiz" type="text" value="12.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtQuiz_0" borde="" style="border: none" /> 
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl02$txtFinal" type="text" value="12.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtFinal_0" style="border: none" /> 
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl02$txtTotal" type="text" value="24.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtTotal_0" style="border: none" /> 
+                        </td><td>Akitur Rahman</td><td>std-103</td><td>12.00</td><td>12.00</td><td>24.00</td><td>54</td><td>43</td><td>43</td><td>Class 9</td><td>15</td><td>1015</td><td>15</td><td>Sci-101</td><td>Math</td>
+		</tr><tr>
+			<td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl03$txtStdId" type="text" value="std-104" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtStdId_1" style="border: none" />
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl03$txtStdName" type="text" value="Dhubo Rahman" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtStdName_1" style="border: none" />
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl03$txtQuiz" type="text" value="2.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtQuiz_1" borde="" style="border: none" /> 
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl03$txtFinal" type="text" value="12.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtFinal_1" style="border: none" /> 
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl03$txtTotal" type="text" value="14.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtTotal_1" style="border: none" /> 
+                        </td><td>Dhubo Rahman</td><td>std-104</td><td>2.00</td><td>12.00</td><td>14.00</td><td>55</td><td>43</td><td>43</td><td>Class 9</td><td>15</td><td>1016</td><td>15</td><td>Sci-101</td><td>Math</td>
+		</tr><tr>
+			<td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl04$txtStdId" type="text" value="std-105" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtStdId_2" style="border: none" />
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl04$txtStdName" type="text" value="Hridoy Dey" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtStdName_2" style="border: none" />
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl04$txtQuiz" type="text" value="12.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtQuiz_2" borde="" style="border: none" /> 
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl04$txtFinal" type="text" value="12.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtFinal_2" style="border: none" /> 
+                        </td><td>
+                            <input name="ctl00$ContentPlaceHolder1$grdResultAdd$ctl04$txtTotal" type="text" value="24.00" readonly="readonly" id="ContentPlaceHolder1_grdResultAdd_txtTotal_2" style="border: none" /> 
+                        </td><td>Hridoy Dey</td><td>std-105</td><td>12.00</td><td>12.00</td><td>24.00</td><td>56</td><td>43</td><td>43</td><td>Class 9</td><td>15</td><td>1017</td><td>15</td><td>Sci-101</td><td>Math</td>
+		</tr>
+	</table>
+</div>
